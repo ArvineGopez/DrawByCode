@@ -47,7 +47,7 @@ public class DrawingArea extends View // You need to extend the View class
         pntTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         pntGraphicsPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-        pntGraphicsPaint.setColor(Color.BLACK);
+        pntGraphicsPaint.setColor(Color.BLUE);
         pntGraphicsPaint.setStrokeWidth(3);
 
     }
@@ -69,9 +69,12 @@ public class DrawingArea extends View // You need to extend the View class
 
         super.onDraw(canvas);
 
+
         canvas.drawCircle((float)50.0, (float)50.0, (float)50.0, pntGraphicsPaint);
-
-
+        pntGraphicsPaint.setColor(Color.BLUE);
+        canvas.drawRect((float)60.0, (float)60.0, (float)340.0, (float)340.0,pntGraphicsPaint);
+        pntGraphicsPaint.setColor(Color.BLACK);
+        pntGraphicsPaint.setStrokeWidth(3);
     }
 
 
