@@ -70,11 +70,15 @@ public class DrawingArea extends View // You need to extend the View class
         super.onDraw(canvas);
 
 
-        canvas.drawCircle((float)50.0, (float)50.0, (float)50.0, pntGraphicsPaint);
+        canvas.drawCircle((float) 300.0, (float) 300.0, (float) 50, pntGraphicsPaint);
         pntGraphicsPaint.setColor(Color.BLUE);
-        canvas.drawRect((float)60.0, (float)60.0, (float)340.0, (float)340.0,pntGraphicsPaint);
-        pntGraphicsPaint.setColor(Color.BLACK);
-        pntGraphicsPaint.setStrokeWidth(3);
+        canvas.drawLine((float) 300.0, (float) 300.0, (float) 300.0, (float) 600.0, pntGraphicsPaint);
+        canvas.drawLine((float) 300.0, (float) 450.0, (float) 400.0, (float) 500.0, pntGraphicsPaint);
+        canvas.drawLine((float)300.0, (float)450.0, (float)200.0, (float)500.0, pntGraphicsPaint);
+        canvas.drawLine((float) 300.0, (float) 600.0, (float) 400.0, (float) 900.0, pntGraphicsPaint);
+        canvas.drawLine((float)300.0, (float)600.0, (float)200.0, (float)900.0, pntGraphicsPaint);
+
+
     }
 
 
