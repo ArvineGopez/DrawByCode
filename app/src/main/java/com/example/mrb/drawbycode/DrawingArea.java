@@ -47,7 +47,7 @@ public class DrawingArea extends View // You need to extend the View class
         pntTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         pntGraphicsPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-        pntGraphicsPaint.setColor(Color.BLUE);
+        pntGraphicsPaint.setColor(Color.BLACK);
         pntGraphicsPaint.setStrokeWidth(3);
 
     }
@@ -68,15 +68,123 @@ public class DrawingArea extends View // You need to extend the View class
         // The Canvas parameter is what we draw ON; the Paint objects defined above are what we draw WITH.
 
         super.onDraw(canvas);
-
-
+        /**
+         *Stick man
         canvas.drawCircle((float) 300.0, (float) 300.0, (float) 50, pntGraphicsPaint);
         pntGraphicsPaint.setColor(Color.BLUE);
-        canvas.drawLine((float) 300.0, (float) 300.0, (float) 300.0, (float) 600.0, pntGraphicsPaint);
-        canvas.drawLine((float) 300.0, (float) 450.0, (float) 400.0, (float) 500.0, pntGraphicsPaint);
-        canvas.drawLine((float)300.0, (float)450.0, (float)200.0, (float)500.0, pntGraphicsPaint);
+            canvas.drawLine((float) 300.0, (float) 300.0, (float) 300.0, (float) 600.0, pntGraphicsPaint);
+            canvas.drawLine((float) 300.0, (float) 450.0, (float) 400.0, (float) 500.0, pntGraphicsPaint);
+            canvas.drawLine((float)300.0, (float)450.0, (float)200.0, (float)500.0, pntGraphicsPaint);
         canvas.drawLine((float) 300.0, (float) 600.0, (float) 400.0, (float) 900.0, pntGraphicsPaint);
         canvas.drawLine((float)300.0, (float)600.0, (float)200.0, (float)900.0, pntGraphicsPaint);
+
+         */
+
+        //Grid Pattern
+        /*
+        float startX=(float)3.0;
+        float startY=(float)1.5;
+        for (int i=0; i<15; i++)
+        {
+            canvas.drawLine(startX,(float)0.0,startX,(float)1100.0,pntGraphicsPaint);
+            startX += 50.0;
+        }
+        for (int i=0; i<22; i++)
+        {
+            canvas.drawLine((float)5.0,(float)startY,(float)800.0,startY,pntGraphicsPaint);
+            startY += 50.0;
+        }
+        */
+        float startX=(float)0.0;
+        float startY=(float)0.0;
+        float endX=(float)130.0;
+        float endY=(float)130.0;
+
+
+        for (int i=0; i<3; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+        startX=(float)130.0;
+        startY=(float)130.0;
+        endX=(float)260.0;
+        endY=(float)260.0;
+        for (int i=0; i<2; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+        startX=(float)0.0;
+        startY=(float)260.0;
+        endX=(float)130.0;
+        endY=(float)390.0;
+        for (int i=0; i<3; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+        startX=(float)130.0;
+        startY=(float)390.0;
+        endX=(float)260.0;
+        endY=(float)520.0;
+        for (int i=0; i<2; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+        startX=(float)0.0;
+        startY=(float)520.0;
+        endX=(float)130.0;
+        endY=(float)650.0;
+        for (int i=0; i<3; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+        startX=(float)130.0;
+        startY=(float)650.0;
+        endX=(float)260.0;
+        endY=(float)780.0;
+        for (int i=0; i<2; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+        startX=(float)0.0;
+        startY=(float)780.0;
+        endX=(float)130.0;
+        endY=(float)920.0;
+        for (int i=0; i<3; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+        startX=(float)130.0;
+        startY=(float)920.0;
+        endX=(float)130.0;
+        endY=(float)1150.0;
+        for (int i=0; i<2; i++)
+        {
+            canvas.drawRect(startX,startY,endX,endY,pntGraphicsPaint);
+            startX+=260.0;
+            endX+=260.0;
+        }
+
+
+
+
+
+
+
+
 
 
     }
